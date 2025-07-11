@@ -8,6 +8,6 @@ public class Task1 {
     }
 
     public String toLowerCase(String input) {
-        return input.toLowerCase();
+        return input.toUpperCase();
     }
 }
