@@ -9,7 +9,7 @@ public class Tests {
     @Test
     public void toUpperCaseTest() {
         Task1 t1 = new Task1();
-        Assertions.assertEquals("BIG", t1.toUpperCase("big"));
+        Assertions.assertEquals("BIG", t1.toUpperCase("big")); //ghjdthr
     }
 
     @Test
