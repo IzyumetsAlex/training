@@ -7,8 +7,14 @@ public class Tests {
 
 
     @Test
-    public void test1() {
+    public void toUpperCaseTest() {
         Task1 t1 = new Task1();
-        Assertions.assertEquals("BIG", t1.print("big"));
+        Assertions.assertEquals("BIG", t1.toUpperCase("big"));
+    }
+
+    @Test
+    public void toLowerCaseTest() {
+        Task1 t1 = new Task1();
+        Assertions.assertEquals("small", t1.toLowerCase("SMALL"));
     }
 }
