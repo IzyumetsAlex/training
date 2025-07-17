@@ -17,6 +17,7 @@ public class CommaSeparatedArray {
             System.out.println("Отсутствуют данные для вывода.");
             return; // выйти из метода
         }
+
         //System.out.print(myArray[0]);
         //if (myArray != null && myArray.length > 0) {
 
