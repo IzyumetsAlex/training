@@ -8,34 +8,24 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestValueFinder {
 
-    public TestValueFinder(int[] ints) {
 
-    }
+        @Test
+        public void testFindMin() {
 
-    @Test
-    void testFindMin() {
-        // Arrange
-        int[] array = {5, 3, 8, 1};
-        ValueFinder finder = new ValueFinder(array);
+            int[] array = {5, 3, 8, 1, 0, 0 , -5, 6, 4};
+            ValueFinder finder = new ValueFinder(array);
 
-        // Act
-        int result = finder.findMin();
+            int result = finder.findMin();
 
-        // Assert
-        assertEquals(1, result, "Минимальное значение найдено неверно");
-    }
-
-    //private void minValue() {
-    //    TestValueFinder o1 = new TestValueFinder(new int[]{1, 2, 5, 6, 7});
-    //    o1.minValue();
-    //}
+            assertEquals(-5, result, "Минимальное значение найдено неверно");
+            //System.out.println(result);
+        }
 }
 /*
-    @Test
-    public void test3(){
-        TestValueFinder o1 = new TestValueFinder(new int[]{1, 2, 5, 6, 7});
-        o1.findMin();
-    }
-
+        @Test
+        public int test3 () {
+            TestValueFinder o1 = new TestValueFinder(new int[]{1, 2, 5, 6, 7});
+            o1.print();
+        }
 }
 */

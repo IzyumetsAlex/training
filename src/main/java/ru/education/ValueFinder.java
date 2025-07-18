@@ -9,19 +9,13 @@ public class ValueFinder {
     public ValueFinder(int[] myValue) {
         this.myValue = myValue;
 
-
         //public ValueFinder(int[] myValue) {
         //myValue = myValuef;
         //}
-
     }
     public int findMin() {
 
-        if (myValue == null || myValue.length == 0) {
-            throw new IllegalArgumentException("Нет данных для обработки");
-            //System.out.println("Отсутствуют данные для вывода.");
-            //return;
-        }
+        checkArray();
 
         int minValue = Integer.MAX_VALUE;
         for(int num : myValue) {
@@ -33,11 +27,7 @@ public class ValueFinder {
     }
     public int findMax() {
 
-        if (myValue == null || myValue.length == 0) {
-            throw new IllegalArgumentException("Нет данных для обработки");
-            //System.out.println("Отсутствуют данные для вывода.");
-            //return;
-        }
+        checkArray();
 
         int maxValue = Integer.MIN_VALUE;
         for(int num : myValue) {
@@ -49,17 +39,19 @@ public class ValueFinder {
     }
     public int calculateAverage() {
 
-        if (myValue == null || myValue.length == 0) {
-            throw new IllegalArgumentException("Нет данных для обработки");
-            //System.out.println("Отсутствуют данные для вывода.");
-            //return;
-        }
+        checkArray();
 
         int sum = 0;
         for(int num : myValue) {
             sum += num;
         }
         return sum / myValue.length;
+    }
+
+    private void checkArray() {
+        if (myValue == null || myValue.length == 0) {
+            throw new IllegalArgumentException("Отсутствуют данные для вывода");
+        }
     }
 }
 
