@@ -1,14 +1,16 @@
 package ru.education;
 
-import java.util.Arrays;
-
 public class ArraysUtils {
+    private int[] array;
+    public ArraysUtils(int[] array) {
+        this.array = array;
+    }
 
-    public static int findMin(int[] values) {
-        checkArray(values);
+    public int findMin() {
+        checkArray(array);
 
         int minValue = Integer.MAX_VALUE;
-        for (int num : values) {
+        for (int num : array) {
             if (num < minValue) {
                 minValue = num;
             }
@@ -48,8 +50,8 @@ public class ArraysUtils {
             System.out.print(array[i]);
         }
     }
-    private static void checkArray(int[] array) {
-        if (array == null || array.length == 0) {
+    private static void checkArray(int[] arr) {
+        if (arr == null || arr.length == 0) {
             throw new IllegalArgumentException("Отсутствуют данные для обработки.");
         }
     }

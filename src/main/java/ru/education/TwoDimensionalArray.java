@@ -2,9 +2,9 @@ package ru.education;
 
 public class TwoDimensionalArray {
     public static String joinStrings(String[][] array) {
-        if (array == null || array.length == 0)
+        if (array == null || array.length == 0) {
             throw new IllegalArgumentException("Недопустимая матрица");
-
+        }
         int n = array.length;
         StringBuilder result = new StringBuilder();
 
