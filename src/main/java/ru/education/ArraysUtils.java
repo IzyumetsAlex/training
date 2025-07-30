@@ -18,11 +18,11 @@ public class ArraysUtils {
         return minValue;
     }
 
-    public static int findMax(int[] values) {
-        checkArray(values);
+    public static int findMax(int[] array) {
+        checkArray(array);
 
         int maxValue = Integer.MIN_VALUE;
-        for (int num : values) {
+        for (int num : array) {
             if (num > maxValue) {
                 maxValue = num;
             }
@@ -30,14 +30,14 @@ public class ArraysUtils {
         return maxValue;
     }
 
-    public static double calculateAverage(int[] values) {
-        checkArray(values);
+    public static double calculateAverage(int[] array) {
+        checkArray(array);
 
         long sum = 0L;
-        for (int num : values) {
+        for (int num : array) {
             sum += num;
         }
-        return (double)sum / values.length;
+        return (double)sum / array.length;
     }
 
     public static void print(int[] array) {
