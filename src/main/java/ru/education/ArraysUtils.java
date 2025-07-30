@@ -1,12 +1,12 @@
 package ru.education;
 
 public class ArraysUtils {
-    private int[] array;
+    //private int[] array;
     public ArraysUtils(int[] array) {
-        this.array = array;
+        // this.array = array;
     }
 
-    public int findMin() {
+    public static int findMin(int[] array) {
         checkArray(array);
 
         int minValue = Integer.MAX_VALUE;
