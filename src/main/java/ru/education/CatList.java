@@ -1,7 +1,7 @@
 package ru.education;
 
 import java.util.ArrayList;
-
+/*
 public class CatList {
     private final String name;
 
@@ -31,3 +31,6 @@ public class CatList {
         }
     }
 }
+
+
+ */

@@ -14,8 +14,16 @@ public class ArraysList {
 
     public static <T> void removeElement(List<T> list, T element) {
         for (T listItem : list) {
-            if (listItem.equals(element)) {
+                if (listItem.equals(element)) {
                 list.remove(listItem);
+            }
+        }
+    }
+
+    public static <T> void addDuplicate(List<T> list) {
+        for (T listItem : list) {
+            if (listItem.equals(element)) {
+                list.add(listItem);
             }
         }
     }
@@ -67,5 +75,8 @@ public class ArraysList {
 
         removeElement(uniqueCars, new Car("Audi", 2017));
         System.out.println("Список:" + uniqueCars);
+
+        addDuplicate(uniqueCars, new Car("Tesla", 2020));
+        System.out.println("Список с дублем:" + uniqueCars);
     }
 }
