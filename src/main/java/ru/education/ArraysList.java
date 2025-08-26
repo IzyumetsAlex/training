@@ -22,9 +22,8 @@ public class ArraysList {
 
     public static <T> void addDuplicate(List<T> list) {
         for (T listItem : list) {
-            if (listItem.equals(element)) {
-                list.add(listItem);
-            }
+            int index = list.indexOf(listItem);
+            list.add(index + 1, listItem);
         }
     }
 
@@ -76,7 +75,7 @@ public class ArraysList {
         removeElement(uniqueCars, new Car("Audi", 2017));
         System.out.println("Список:" + uniqueCars);
 
-        addDuplicate(uniqueCars, new Car("Tesla", 2020));
+        addDuplicate(uniqueCars);
         System.out.println("Список с дублем:" + uniqueCars);
     }
 }
