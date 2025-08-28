@@ -20,11 +20,18 @@ public class ArraysList {
         }
     }
 
-    public static <T> void addDuplicate(List<T> list) {
-        for (T listItem : list) {
+    public static <T> void addDuplicate(List<T> list, T elementDuplicate) {
+        ListIterator<T> iterator = list.listIterator();
+        while (iterator.hasNext()) {
+            T item = iterator.next();
+            if (item.equals(elementDuplicate)) {
+                iterator.add(item);
+            }
+        }
+        /* for (T listItem : list) {
             int index = list.indexOf(listItem);
             list.add(index + 1, listItem);
-        }
+        }*/
     }
 
         static class Car {
@@ -75,7 +82,7 @@ public class ArraysList {
         removeElement(uniqueCars, new Car("Audi", 2017));
         System.out.println("Список:" + uniqueCars);
 
-        addDuplicate(uniqueCars);
+        addDuplicate(uniqueCars, new Car("Tesla", 2020));
         System.out.println("Список с дублем:" + uniqueCars);
     }
 }
